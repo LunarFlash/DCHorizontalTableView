@@ -10,7 +10,7 @@
 
 @interface DCHorizontalCell : UITableViewCell <UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, retain) UITableView *horizontalTableView;
-@property (nonatomic, retain) NSArray *dataList;
+@property (nonatomic, strong) UITableView *horizontalTableView;
+@property (nonatomic, strong) NSArray *items;
 
 @end

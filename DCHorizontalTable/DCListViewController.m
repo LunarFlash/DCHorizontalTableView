@@ -7,6 +7,8 @@
 //
 
 #import "DCListViewController.h"
+#import "DCHorizontalCell.h"
+#import "ControlVariables.h"
 
 @interface DCListViewController ()
 
@@ -23,6 +25,15 @@
     }
     return self;
 }
+
+- (void)awakeFromNib
+{
+    [self.tableView setBackgroundColor:kVerticalTableBackgroundColor];
+    self.tableView.rowHeight = kCellHeight + (kRowVerticalPadding * 0.5) + ((kRowVerticalPadding * 0.5) * 0.5);
+}
+
+
+
 
 - (void)viewDidLoad
 {
@@ -57,14 +68,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSSortDescriptor* sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:nil ascending:YES selector:@selector(localizedCompare:)];
-    NSArray* sortedCategories = [self.dataDictionary.allKeys sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
-    
-    NSString *categoryName = [sortedCategories objectAtIndex:section];
-    
-    NSArray *currentCategory = [self.dataDictionary objectForKey:categoryName];
-    
-    return [currentCategory count];
+    return 1;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -81,26 +85,29 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    static NSString *CellIdentifier = @"HorizontalCell";
+    
+    DCHorizontalCell *cell = (DCHorizontalCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
+        cell = [[DCHorizontalCell alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, tableView.frame.size.height)];
     }
-
+    
+    
     
     NSSortDescriptor* sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:nil ascending:YES selector:@selector(localizedCompare:)];
     NSArray* sortedCategories = [self.dataDictionary.allKeys sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
-    
+  
     NSString *categoryName = [sortedCategories objectAtIndex:indexPath.section];
     
     NSArray *currentCategory = [self.dataDictionary objectForKey:categoryName];
     
-    NSDictionary *currentArticle = [currentCategory objectAtIndex:indexPath.row];
+    // Pass the entire array to our HorizontalTableCell.
+    cell.items = currentCategory;
     
-    cell.textLabel.text = [currentArticle objectForKey:@"Title"];
-    cell.imageView.image = [UIImage imageNamed:[currentArticle objectForKey:@"ImageName"]];
+    
+    
     
     return cell;
     
