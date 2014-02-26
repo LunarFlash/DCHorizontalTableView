@@ -93,7 +93,7 @@
 		3523F62018BDA39A00F99C6E /* YogaGirl.png in Resources */ = {isa = PBXBuildFile; fileRef = 3523F5D818BDA39A00F99C6E /* YogaGirl.png */; };
 		3523F62118BDA39A00F99C6E /* Articles.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3523F5D918BDA39A00F99C6E /* Articles.plist */; };
 		3523F62218BDA39A00F99C6E /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3523F5DA18BDA39A00F99C6E /* Credits.rtf */; };
-		3523F62618BDA7DE00F99C6E /* DCHorizontalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3523F62518BDA7DE00F99C6E /* DCHorizontalCell.m */; };
+		3523F62618BDA7DE00F99C6E /* DCHorizontalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3523F62518BDA7DE00F99C6E /* DCHorizontalTableViewCell.m */; };
 		3523F62B18BDB23600F99C6E /* DCItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3523F62A18BDB23600F99C6E /* DCItemCell.m */; };
 /* End PBXBuildFile section */
 
@@ -199,8 +199,8 @@
 		3523F5D818BDA39A00F99C6E /* YogaGirl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YogaGirl.png; sourceTree = "<group>"; };
 		3523F5D918BDA39A00F99C6E /* Articles.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Articles.plist; sourceTree = "<group>"; };
 		3523F5DA18BDA39A00F99C6E /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
-		3523F62418BDA7DE00F99C6E /* DCHorizontalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCHorizontalCell.h; sourceTree = "<group>"; };
-		3523F62518BDA7DE00F99C6E /* DCHorizontalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCHorizontalCell.m; sourceTree = "<group>"; };
+		3523F62418BDA7DE00F99C6E /* DCHorizontalTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCHorizontalTableViewCell.h; sourceTree = "<group>"; };
+		3523F62518BDA7DE00F99C6E /* DCHorizontalTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCHorizontalTableViewCell.m; sourceTree = "<group>"; };
 		3523F62818BDADEC00F99C6E /* ControlVariables.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ControlVariables.h; sourceTree = "<group>"; };
 		3523F62918BDB23600F99C6E /* DCItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCItemCell.h; sourceTree = "<group>"; };
 		3523F62A18BDB23600F99C6E /* DCItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCItemCell.m; sourceTree = "<group>"; };
@@ -404,8 +404,8 @@
 			isa = PBXGroup;
 			children = (
 				3523F62818BDADEC00F99C6E /* ControlVariables.h */,
-				3523F62418BDA7DE00F99C6E /* DCHorizontalCell.h */,
-				3523F62518BDA7DE00F99C6E /* DCHorizontalCell.m */,
+				3523F62418BDA7DE00F99C6E /* DCHorizontalTableViewCell.h */,
+				3523F62518BDA7DE00F99C6E /* DCHorizontalTableViewCell.m */,
 				3523F62918BDB23600F99C6E /* DCItemCell.h */,
 				3523F62A18BDB23600F99C6E /* DCItemCell.m */,
 			);
@@ -585,7 +585,7 @@
 				3523F62B18BDB23600F99C6E /* DCItemCell.m in Sources */,
 				3523F56618BD9F4300F99C6E /* main.m in Sources */,
 				3523F56A18BD9F4300F99C6E /* DCAppDelegate.m in Sources */,
-				3523F62618BDA7DE00F99C6E /* DCHorizontalCell.m in Sources */,
+				3523F62618BDA7DE00F99C6E /* DCHorizontalTableViewCell.m in Sources */,
 				3523F59018BDA04100F99C6E /* DCListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

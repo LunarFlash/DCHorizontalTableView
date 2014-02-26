@@ -6,11 +6,11 @@
 //  Copyright (c) 2014 Dicey. All rights reserved.
 //
 
-#import "DCHorizontalCell.h"
+#import "DCHorizontalTableViewCell.h"
 #import "ControlVariables.h"
 #import "DCItemCell.h"
 
-@implementation DCHorizontalCell
+@implementation DCHorizontalTableViewCell
 @synthesize items, horizontalTableView;
 
 

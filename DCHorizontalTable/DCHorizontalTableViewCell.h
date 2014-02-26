@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DCHorizontalCell : UITableViewCell <UITableViewDelegate, UITableViewDataSource>
+@interface DCHorizontalTableViewCell : UITableViewCell <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *horizontalTableView;
 @property (nonatomic, strong) NSArray *items;

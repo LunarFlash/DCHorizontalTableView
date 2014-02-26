@@ -7,7 +7,7 @@
 //
 
 #import "DCListViewController.h"
-#import "DCHorizontalCell.h"
+#import "DCHorizontalTableViewCell.h"
 #import "ControlVariables.h"
 
 @interface DCListViewController ()
@@ -88,10 +88,10 @@
     
     static NSString *CellIdentifier = @"HorizontalCell";
     
-    DCHorizontalCell *cell = (DCHorizontalCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    DCHorizontalTableViewCell *cell = (DCHorizontalTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (!cell) {
-        cell = [[DCHorizontalCell alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, tableView.frame.size.height)];
+        cell = [[DCHorizontalTableViewCell alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, tableView.frame.size.height)];
     }
     
     
