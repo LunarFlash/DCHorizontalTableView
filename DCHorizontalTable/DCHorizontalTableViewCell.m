@@ -32,13 +32,15 @@
         self.horizontalTableView.transform = CGAffineTransformMakeRotation(-M_PI * 0.5);
         
         // After rotating our table we set the table view’s frame again. You might be asking yourself why we created a frame in the table’s initializer, well since we now rotated it we must reset the values of the table. And since a UITableView cannot be instantiated with a simple call to init, we must repeat this process.
-        [self.horizontalTableView setFrame:CGRectMake(kRowHorizontalPadding * 0.5, kRowVerticalPadding * 0.5, kTableLength - kRowHorizontalPadding, kCellHeight)];
-        
+        //[self.horizontalTableView setFrame:CGRectMake(kRowHorizontalPadding * 0.5, kRowVerticalPadding * 0.5, kTableLength - kRowHorizontalPadding, kCellHeight)];
+        [self.horizontalTableView setFrame:CGRectMake(kRowHorizontalPadding * 0.5,
+                                                      kRowVerticalPadding * 0.5,
+                                                      kTableLength - kRowHorizontalPadding,
+                                                      kCellHeight)];
         
         // Next up we set the height of our table view’s rows, but since our table is now rotated and appears horizontally, the row height is actually the width of our cell now, which is why we use the kCellWidth constant. It’s just a game of words because Apple’s API refers to a table vertically but we are using it horizontally, nothing tricky here.
         self.horizontalTableView.rowHeight = kCellWidth;
         self.horizontalTableView.backgroundColor = kHorizontalTableBackgroundColor;
-        
         self.horizontalTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         self.horizontalTableView.separatorColor = [UIColor clearColor];
         
