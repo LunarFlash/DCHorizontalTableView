@@ -26,8 +26,14 @@
     if (self = [super initWithFrame:frame]){
         
         // Allocate and initialize a new UIImageView and give it a custom frame. As you will see we don’t position it at 0, 0 (the top left corner) but we give it a little bit of padding, as you remember a while back I told you this will allow for separation between each article cell.
-        self.thumbnail = [[UIImageView alloc] initWithFrame:CGRectMake(kArticleCellHorizontalInnerPadding, kArticleCellVerticalInnerPadding, kCellWidth - kArticleCellHorizontalInnerPadding * 2, kCellHeight - kArticleCellVerticalInnerPadding * 2)];
-        // TODO: why isnt this working??
+        self.thumbnail = [[UIImageView alloc] initWithFrame:CGRectMake
+                          (kArticleCellHorizontalInnerPadding,
+                           kArticleCellVerticalInnerPadding,
+                           kCellWidth - kArticleCellHorizontalInnerPadding * 2,
+                           kCellHeight - kArticleCellVerticalInnerPadding * 2)];
+        
+        
+        self.thumbnail.layer.masksToBounds = YES;  //UIImageView control creates a pseudo-subview to hold the UIImage
         self.thumbnail.layer.cornerRadius = self.thumbnail.frame.size.width * 0.5f;
         
         // Set the thumbnail as opaque, Apple recommends that all views are opaque when possible as it will greatly improve the performance of our UI.
