@@ -95,6 +95,7 @@
 		3523F62218BDA39A00F99C6E /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3523F5DA18BDA39A00F99C6E /* Credits.rtf */; };
 		3523F62618BDA7DE00F99C6E /* DCHorizontalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3523F62518BDA7DE00F99C6E /* DCHorizontalTableViewCell.m */; };
 		3523F62B18BDB23600F99C6E /* DCItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3523F62A18BDB23600F99C6E /* DCItemCell.m */; };
+		35813FBB18E8BA6500D80D12 /* demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 35813FBA18E8BA6500D80D12 /* demo.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -204,6 +205,7 @@
 		3523F62818BDADEC00F99C6E /* ControlVariables.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ControlVariables.h; sourceTree = "<group>"; };
 		3523F62918BDB23600F99C6E /* DCItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCItemCell.h; sourceTree = "<group>"; };
 		3523F62A18BDB23600F99C6E /* DCItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCItemCell.m; sourceTree = "<group>"; };
+		35813FBA18E8BA6500D80D12 /* demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = demo.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,6 +309,7 @@
 		3523F59118BDA38A00F99C6E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				35813FBA18E8BA6500D80D12 /* demo.gif */,
 				3523F59218BDA39A00F99C6E /* Article Images */,
 				3523F5D918BDA39A00F99C6E /* Articles.plist */,
 				3523F5DA18BDA39A00F99C6E /* Credits.rtf */,
@@ -518,6 +521,7 @@
 				3523F5E618BDA39A00F99C6E /* CodingChip.png in Resources */,
 				3523F60718BDA39A00F99C6E /* ParisEiffel.png in Resources */,
 				3523F5F518BDA39A00F99C6E /* GoldenGate.png in Resources */,
+				35813FBB18E8BA6500D80D12 /* demo.gif in Resources */,
 				3523F5EA18BDA39A00F99C6E /* Cutlery.png in Resources */,
 				3523F5DD18BDA39A00F99C6E /* Balloons.png in Resources */,
 				3523F61618BDA39A00F99C6E /* Swatches.png in Resources */,
